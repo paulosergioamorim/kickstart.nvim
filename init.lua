@@ -817,8 +817,7 @@ do
   -- You can press `g?` for help in this menu.
   local ensure_installed = vim.tbl_keys(servers or {})
   vim.list_extend(ensure_installed, {
-    -- nvim-jdtls starts the Eclipse JDT language server through this wrapper.
-    'jdtls',
+    -- You can add other tools here that you want Mason to install
   })
 
   require('mason-tool-installer').setup { ensure_installed = ensure_installed }
@@ -1035,7 +1034,7 @@ do
   -- NOTE: You can add your own plugins, configuration, etc from `lua/custom/plugins/*.lua`
   --
   --  Uncomment the following line and add your plugins to `lua/custom/plugins/*.lua` to get going.
-  require 'custom.plugins'
+  -- require 'custom.plugins'
 end
 
 -- The line beneath this is called `modeline`. See `:help modeline`
